@@ -1,10 +1,10 @@
 package com.skypro.test.ServiceBasket.Interfaces;
 
-import java.util.Set;
+import java.util.List;
 
 public interface ServiceShop {
-    Set<String> add(Set<String> id);
+    List<Integer> add(List<Integer> id);
 
-    Set<String> get();
+    List<Integer> get();
 
 }

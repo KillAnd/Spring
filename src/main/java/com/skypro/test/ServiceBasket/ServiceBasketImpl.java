@@ -4,8 +4,7 @@ import com.skypro.test.ServiceBasket.Interfaces.ServiceBasketInterface;
 import com.skypro.test.ServiceBasket.Interfaces.ServiceShop;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class ServiceBasketImpl implements ServiceShop {
@@ -17,12 +16,12 @@ public class ServiceBasketImpl implements ServiceShop {
     }
 
     @Override
-    public Set<String> add(Set<String> id) {
+    public List<Integer> add(List<Integer> id) {
         return serviceBasketInterface.add(id);
     }
 
     @Override
-    public Set<String> get() {
+    public List<Integer> get() {
         return serviceBasketInterface.get();
     }
 

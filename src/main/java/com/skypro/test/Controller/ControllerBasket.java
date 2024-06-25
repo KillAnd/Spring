@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/order")
@@ -20,12 +20,12 @@ public class ControllerBasket {
     }
 
     @GetMapping("/add")
-    public Set<String> add(@RequestParam Set<String> id) {
+    public List<Integer> add(@RequestParam List<Integer> id) {
         return serviceShop.add(id);
     }
 
     @GetMapping("/get")
-    public Set<String> get() {
+    public List<Integer> get() {
         return serviceShop.get();
     }
 }

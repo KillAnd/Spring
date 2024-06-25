@@ -1,7 +1,6 @@
 package com.skypro.test.ServiceBasket;
 
 import com.skypro.test.ServiceBasket.Interfaces.ServiceBasketInterface;
-import com.skypro.test.ServiceBasket.Interfaces.ServiceShop;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -15,16 +14,16 @@ import java.util.Set;
 public class ServiceImpl implements ServiceBasketInterface {
 
 
-    private final Set<String> basket = new HashSet<>();
+    private final List<Integer> basket = new ArrayList<>();
 
     @Override
-    public Set<String> add(Set<String> id) {
+    public List<Integer> add(List<Integer> id) {
         basket.addAll(id);
         return basket;
     }
 
     @Override
-    public Set<String> get() {
+    public List<Integer> get() {
         return basket;
     }
 
